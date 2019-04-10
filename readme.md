@@ -42,7 +42,11 @@ Building the rk-debian rootfs:
 Building the rk-debain rootfs with debug:
 
 	VERSION=debug ARCH=arm64 ./mk-rootfs-stretch-arm64.sh
+	
+Copying modules to /lib/modules/$(uname -r)/ and firmware to /lib/firmware/$(uname -r)/:
 
+	./mk-rootfs-modules.sh
+	
 Creating the ext4 image(linaro-rootfs.img):
 
 	./mk-image.sh
