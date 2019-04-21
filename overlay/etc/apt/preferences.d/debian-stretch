@@ -1,0 +1,8 @@
+Package: *
+Pin: release a=stable
+Pin-Priority: 700
+
+Package: *
+Pin: release n=stretch-updates
+Pin-Priority: 700
+

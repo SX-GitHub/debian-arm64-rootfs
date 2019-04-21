@@ -112,6 +112,26 @@ else
 	echo "won't install qt"
 fi
 
+#---------------Firmware--------------
+echo -e "\033[36m Setup firmware.................... \033[0m"
+dpkg -i /packages/firmware/*.deb
+apt-get install -f -y
+
+#---------------Overlay--------------
+echo -e "\033[36m Setup Kernel Overlays.................... \033[0m"
+dpkg -i  /packages/overlay/*.deb
+apt-get install -f -y
+
+#---------------MRAA--------------
+echo -e "\033[36m Setup LibMRAA.................... \033[0m"
+dpkg -i  /packages/libmraa/libmraa-rockpi4_0.3_arm64.deb
+apt-get install -f -y
+
+#---------------99 Boards Tools--------------
+echo -e "\033[36m Setup 99 Boards Tools.................... \033[0m"
+dpkg -i  /packages/99boards-tools/96boards-tools-common_0.12_all.deb
+apt-get install -f -y
+
 #---------------Others--------------
 #---------FFmpeg---------
 #apt-get install -y libsdl2-2.0-0 libcdio-paranoia1 libjs-bootstrap libjs-jquery
@@ -120,12 +140,12 @@ fi
 #dpkg -i  /packages/others/mpv/*
 #apt-get install -f -y
 
-#---------------Debug-------------- 
+#---------------Debug--------------
 if [ "$VERSION" == "debug" ] || [ "$VERSION" == "jenkins" ] ; then
 	apt-get install -y sshfs openssh-server bash-completion
 fi
 
-#---------------Custom Script-------------- 
+#---------------Custom Script--------------
 systemctl enable rockchip.service
 systemctl mask systemd-networkd-wait-online.service
 systemctl mask NetworkManager-wait-online.service
@@ -135,7 +155,7 @@ rm /lib/systemd/system/wpa_supplicant@.service
 ln -s /usr/lib/aarch64-linux-gnu/libGLESv2.so /usr/lib/chromium/libGLESv2.so
 ln -s /usr/lib/aarch64-linux-gnu/libEGL.so /usr/lib/chromium/libEGL.so
 
-#---------------Clean-------------- 
+#---------------Clean--------------
 rm -rf /var/lib/apt/lists/*
 
 EOF

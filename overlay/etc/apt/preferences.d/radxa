@@ -1,0 +1,56 @@
+Package: rockchip-overlay
+Pin: origin apt.radxa.com
+Pin-Priority: 600
+
+Package: rockchip-fstab
+Pin: origin apt.radxa.com
+Pin-Priority: 600
+
+Package: rockpi4-dtbo
+Pin: origin apt.radxa.com
+Pin-Priority: 600
+
+Package: rockpi4b-rk-u-boot-lastest
+Pin: origin apt.radxa.com
+Pin-Priority: 600
+
+Package: libmraa-rockpi4
+Pin: origin apt.radxa.com
+Pin-Priority: 600
+
+Package: librockchip-mpp1
+Pin: origin apt.radxa.com
+Pin-Priority: 600
+
+Package: libavcodec57
+Pin: origin apt.radxa.com
+Pin-Priority: -10
+
+Package: libavdevice57
+Pin: origin apt.radxa.com
+Pin-Priority: -10
+
+Package: libavfilter6
+Pin: origin apt.radxa.com
+Pin-Priority: -10
+
+Package: libavformat57
+Pin: origin apt.radxa.com
+Pin-Priority: -10
+
+Package: libavutil55
+Pin: origin apt.radxa.com
+Pin-Priority: -10
+
+Package: libswresample2
+Pin: origin apt.radxa.com
+Pin-Priority: -10
+
+Package: libswscale4
+Pin: origin apt.radxa.com
+Pin-Priority: -10
+
+Package: *
+Pin: origin apt.radxa.com
+Pin-Priority: -10
+

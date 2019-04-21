@@ -1,0 +1,27 @@
+set runtimepath+=/etc/vim/autoload
+set number
+set laststatus=2
+let g:airline_theme = 'springfield'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+
+:hi CursorLine cterm=NONE ctermbg=41 ctermfg=234
+
+autocmd VimEnter * if !argc() | NERDTree | endif
+
+augroup NerdCursor
+  autocmd!
+  autocmd BufEnter NERD_tree_* hi CursorLine gui=underline
+  autocmd BufLeave NERD_tree_* highlight clear CursorLine
+  autocmd BufAdd * highlight clear CursorLine
+augroup END
+
+autocmd bufenter * if (winnr("$")==1 && exists("b:NERDTreeType") && b:NERDTreeType=="primary") | q | endif
+
+map <silent> <C-n> :NERDTreeFocus<CR>
+
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
+let NERDTreeAutoDeleteBuffer=1
+let NERDTreeMinimalUI=1

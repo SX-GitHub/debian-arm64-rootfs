@@ -1,0 +1,171 @@
+Package: xserver-xorg-core
+Pin: release a=testing
+Pin-Priority: 50
+
+Package: xserver-common
+Pin: release a=testing
+Pin-Priority: 50
+
+Package: mpv
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libc6
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libc6-bin
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libc6-dev
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libc-bin
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libc-dev-bin
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libstdc++6
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libass9
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libavcodec58
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libavdevice58
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libavfilter7
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libavformat58
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libavutil56 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libbluray2 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libcdio-cdda2
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libcdio-paranoia2
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libcdio18
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libegl1
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: fontconfig-config 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libfontconfig1 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libfontconfig1-dev 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libfreetype6
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libfreetype6-dev 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libgsm1 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libmp3lame0 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libsdl2-2.0-0 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libgnutls30 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libopenmpt0 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libssh-gcrypt-4 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libgcrypt20 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libgssapi-krb5-2 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libcom-err2
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libk5crypto3
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libkrb5-3
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libkrb5support0
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libopenmpt0
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libhogweed4 
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libidn2-0
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libnettle6
+Pin: release a=testing
+Pin-Priority: 680
+
+Package: libp11-kit0
+Pin: release a=testing
+Pin-Priority: 680i
+
+Package: libtasn1-6
+Pin: release a=testing
+Pin-Priority: 680

@@ -74,6 +74,27 @@ then
 
     # The base target does not come with lightdm
     systemctl restart lightdm.service || true
+
+    rd=$(lsblk -no pkname `findmnt -n -o SOURCE /`)
+    bootp=$(blkid -t "LABEL=boot" | grep   $rd | cut -d \: -f 1)
+
+    bootp_s=${bootp//\//\\\/}
+
+    sed -i -e  "/${bootp_s}/ s/^/#/" /etc/fstab
+
+    cat >> /etc/fstab << EOF
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+
+${bootp}  /boot   vfat    defaults        0       2
+EOF
+
+    echo -n "mount all partitions"
+    echo ""
+
+    mount -a
+
 fi
 
 # read mac-address from efuse

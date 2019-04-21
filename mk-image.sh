@@ -7,10 +7,10 @@ OUT=../out
 
 echo Making rootfs!
 
-if [ -e ${ROOTFSIMAGE} ]; then 
+if [ -e ${ROOTFSIMAGE} ]; then
 	rm ${ROOTFSIMAGE}
 fi
-if [ -e ${MOUNTPOINT} ]; then 
+if [ -e ${MOUNTPOINT} ]; then
 	rm -r ${MOUNTPOINT}
 fi
 
@@ -31,8 +31,9 @@ echo Mount rootfs to ${MOUNTPOINT}
 sudo mount  ${ROOTFSIMAGE} ${MOUNTPOINT}
 trap finish ERR
 
-echo Copy rootfs to ${MOUNTPOINT}
+echo Copy ${TARGET_ROOTFS_DIR}/* to ${MOUNTPOINT}
 sudo cp -rfp ${TARGET_ROOTFS_DIR}/*  ${MOUNTPOINT}
+sudo chown -R 1000:1000 ${MOUNTPOINT}/home/linaro/.*
 
 echo Umount rootfs
 sudo umount ${MOUNTPOINT}
@@ -44,4 +45,3 @@ resize2fs -M ${ROOTFSIMAGE}
 
 [ ! -d ${OUT} ] && mkdir ${OUT}
 cp $ROOTFSIMAGE ${OUT}
-

@@ -3,7 +3,6 @@
 #ltrace
 #netperf
 #rt-app
-96boards-tools-common
 acpi-support-base
 adduser
 alsa-utils
@@ -39,6 +38,8 @@ file
 #fonts-ipafont-gothic
 #fonts-ipafont-mincho
 #fonts-unfonts-core
+fonts-noto
+fonts-noto-cjk
 gconf2
 #gdb
 #gdbserver
@@ -46,6 +47,7 @@ gdisk
 #git
 gnome-keyring
 gnome-system-tools
+gnome-screenshot
 #gnupg
 #gpsd
 #gpsd-clients
@@ -88,6 +90,7 @@ lxsession-default-apps
 lxsession-logout
 lxshortcut
 lxtask
+make
 makedev
 mawk
 mesa-utils
@@ -122,6 +125,7 @@ pulseaudio-module-bluetooth
 read-edid
 resolvconf
 rfkill
+rsync
 rsyslog
 ssh-import-id
 strace
@@ -144,6 +148,7 @@ x11-xserver-utils
 xdg-user-dirs-gtk
 xfce4-power-manager-plugins
 xinit
+xmms2
 #xmms2-client-cli
 #xmms2-plugin-mad
 #xmms2-plugin-pulse
@@ -158,4 +163,3 @@ zip
 lxde-common
 desktop-base
 systemd-sysv
-
