@@ -158,6 +158,9 @@ rm /lib/systemd/system/wpa_supplicant@.service
 ln -s /usr/lib/aarch64-linux-gnu/libGLESv2.so /usr/lib/chromium/libGLESv2.so
 ln -s /usr/lib/aarch64-linux-gnu/libEGL.so /usr/lib/chromium/libEGL.so
 
+#---------------Update font cache--------------
+fc-cache -f -v
+
 #---------------Clean--------------
 rm -rf /var/lib/apt/lists/*
 
