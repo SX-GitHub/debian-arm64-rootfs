@@ -26,7 +26,11 @@ sudo tar -xpf linaro-stretch-alip-*.tar.gz
 echo -e "\033[36m Copy overlay to rootfs \033[0m"
 sudo mkdir -p $TARGET_ROOTFS_DIR/packages
 sudo cp -rf packages/$ARCH/* $TARGET_ROOTFS_DIR/packages
-# some configs
+
+# resources
+sudo cp -rf overlay/lib $TARGET_ROOTFS_DIR/
+sudo cp -rf overlay/usr $TARGET_ROOTFS_DIR/
+
 if [ "$ARCH" == "arm64"  ]; then
     sudo cp overlay-firmware/usr/bin/brcm_patchram_plus1_64 $TARGET_ROOTFS_DIR/usr/bin/brcm_patchram_plus1
     sudo cp overlay-firmware/usr/bin/rk_wifi_init_64 $TARGET_ROOTFS_DIR/usr/bin/rk_wifi_init
@@ -161,4 +165,5 @@ EOF
 
 sudo umount $TARGET_ROOTFS_DIR/dev
 
-sudo cp -rf overlay/* $TARGET_ROOTFS_DIR/
+# configs
+sudo cp -rf overlay/etc $TARGET_ROOTFS_DIR/
